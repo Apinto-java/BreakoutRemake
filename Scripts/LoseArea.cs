@@ -8,14 +8,6 @@ namespace Breakout.Scripts.Objects
 		[Signal]
 		public delegate void GameOverEventHandler();
 
-		public override void _Ready()
-		{
-		}
-
-		public override void _Process(double delta)
-		{
-		}
-
 		public void OnBallEntered(Node2D node)
 		{
 			EmitSignal(SignalName.GameOver);

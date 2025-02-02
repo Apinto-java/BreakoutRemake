@@ -19,10 +19,6 @@ namespace Breakout.Scripts.Objects
 		[Signal]
 		public delegate void HitWallEventHandler();
 
-		public override void _Ready()
-		{
-		}
-
 		public override void _Process(double delta)
 		{
 			if (!Enabled)

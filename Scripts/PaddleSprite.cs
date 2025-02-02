@@ -10,11 +10,6 @@ namespace Breakout.Scripts.Objects
 		[Export] private float _hitDuration;
 		private Timer _timer;
 
-		public override void _Ready()
-		{
-
-		}
-
 		public void Hit()
 		{
 			Texture = _textureWhenHit;

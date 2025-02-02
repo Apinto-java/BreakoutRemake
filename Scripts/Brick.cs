@@ -26,10 +26,6 @@ namespace Breakout.Scripts.Objects
 			}
 		}
 
-		public override void _Process(double delta)
-		{
-		}
-
 		public void CollidedWithBall()
 		{
 			QueueFree();
