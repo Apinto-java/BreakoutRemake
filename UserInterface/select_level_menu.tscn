@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b72tvvsn1mxro"]
+
+[ext_resource type="PackedScene" uid="uid://q42fio8f2bx8" path="res://Objects/background_color.tscn" id="1_ledw4"]
+[ext_resource type="PackedScene" uid="uid://cgphgk7l8a32s" path="res://UserInterface/select_level_card.tscn" id="2_o7yd2"]
+
+[node name="SelectLevelMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BackgroundColor" parent="." instance=ExtResource("1_ledw4")]
+layout_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SelectLevelCard" parent="CenterContainer" instance=ExtResource("2_o7yd2")]
+layout_mode = 2

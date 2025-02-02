@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://rkyrp54ffvst"]
+
+[ext_resource type="Script" path="res://Scripts/Wall.cs" id="1_4yv50"]
+[ext_resource type="Texture2D" uid="uid://ci3eeb0apk2gj" path="res://Assets/white_tile.png" id="1_t20uj"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dogf5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmy2q"]
+size = Vector2(448, 32)
+
+[node name="Wall" type="StaticBody2D"]
+modulate = Color(0.115862, 0.633325, 0.800393, 1)
+collision_layer = 128
+collision_mask = 3
+script = ExtResource("1_4yv50")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("CanvasItemMaterial_dogf5")
+scale = Vector2(14, 1)
+texture = ExtResource("1_t20uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_mmy2q")

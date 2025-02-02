@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="BrickMap" load_steps=13 format=3 uid="uid://sp103dupxsa2"]
+
+[ext_resource type="Texture2D" uid="uid://r7ydnfpdqjau" path="res://Assets/BrownBrick.png" id="1_bo3er"]
+[ext_resource type="Script" path="res://Scripts/BrickMap.cs" id="1_m3dmm"]
+[ext_resource type="Script" path="res://Scripts/BrickEntry.cs" id="2_u6pqt"]
+[ext_resource type="Texture2D" uid="uid://fvoe6g0anxiq" path="res://Assets/RedBrick.png" id="3_aj350"]
+[ext_resource type="Texture2D" uid="uid://d8rlvctn8ayr" path="res://Assets/PinkBrick.png" id="4_nqga3"]
+[ext_resource type="Texture2D" uid="uid://bs6ntvo47yxl2" path="res://Assets/GreenBrick.png" id="5_ltbem"]
+[ext_resource type="Texture2D" uid="uid://houcde6bxia7" path="res://Assets/YellowBrick.png" id="6_yrx35"]
+
+[sub_resource type="Resource" id="Resource_hpfpn"]
+script = ExtResource("2_u6pqt")
+BrickColor = 0
+Texture = ExtResource("1_bo3er")
+Score = 25
+SpeedMultiplier = 1.3
+
+[sub_resource type="Resource" id="Resource_n8t7m"]
+script = ExtResource("2_u6pqt")
+BrickColor = 1
+Texture = ExtResource("3_aj350")
+Score = 20
+SpeedMultiplier = 1.2
+
+[sub_resource type="Resource" id="Resource_jy1ew"]
+script = ExtResource("2_u6pqt")
+BrickColor = 2
+Texture = ExtResource("4_nqga3")
+Score = 15
+SpeedMultiplier = 1.1
+
+[sub_resource type="Resource" id="Resource_qs3k4"]
+script = ExtResource("2_u6pqt")
+BrickColor = 3
+Texture = ExtResource("5_ltbem")
+Score = 10
+SpeedMultiplier = 1.01
+
+[sub_resource type="Resource" id="Resource_lf5nk"]
+script = ExtResource("2_u6pqt")
+BrickColor = 4
+Texture = ExtResource("6_yrx35")
+Score = 5
+SpeedMultiplier = 1.001
+
+[resource]
+script = ExtResource("1_m3dmm")
+BrickTextures = [SubResource("Resource_hpfpn"), SubResource("Resource_n8t7m"), SubResource("Resource_jy1ew"), SubResource("Resource_qs3k4"), SubResource("Resource_lf5nk")]

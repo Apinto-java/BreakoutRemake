@@ -1,0 +1,20 @@
+[gd_scene load_steps=9 format=3 uid="uid://xsbp0sfyuycb"]
+
+[ext_resource type="Script" path="res://Scripts/Audio/LevelAudioStreamPlayer.cs" id="1_2crik"]
+[ext_resource type="AudioStream" uid="uid://hmak4ydy52j5" path="res://Assets/Audio/FX/Retro PickUp 18.wav" id="2_gf3od"]
+[ext_resource type="AudioStream" uid="uid://cmv5bxrq3k38e" path="res://Assets/Audio/FX/Retro Blop 07.wav" id="2_ncix2"]
+[ext_resource type="AudioStream" uid="uid://ced3qcbi82wx" path="res://Assets/Audio/FX/Retro FootStep 03.wav" id="3_7o5le"]
+[ext_resource type="AudioStream" uid="uid://g6ec14bq2wma" path="res://Assets/Audio/FX/Retro Impact Punch 07.wav" id="4_4ffku"]
+[ext_resource type="AudioStream" uid="uid://cln4ontbt8qxl" path="res://Assets/Audio/FX/Retro Event Wrong Simple 03.wav" id="5_mdc7r"]
+[ext_resource type="AudioStream" uid="uid://cqqdimxcf467v" path="res://Assets/Audio/FX/Retro Negative Short 23.wav" id="6_i0dw8"]
+[ext_resource type="AudioStream" uid="uid://f0jsb1qjjqop" path="res://Assets/Audio/FX/Retro Magic 11.wav" id="8_2arrh"]
+
+[node name="LevelAudioStreamPlayer" type="AudioStreamPlayer"]
+script = ExtResource("1_2crik")
+_startGameAudioStream = ExtResource("2_gf3od")
+_impactPaddleStream = ExtResource("2_ncix2")
+_wallImpactStream = ExtResource("3_7o5le")
+_brickImpactStream = ExtResource("4_4ffku")
+_loseAreaStream = ExtResource("5_mdc7r")
+_gameOverStream = ExtResource("6_i0dw8")
+_gameWonAudioStream = ExtResource("8_2arrh")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cquhbwwnspwc2"]
+
+[ext_resource type="Script" path="res://Scripts/UserInterface/GameEndedMenu.cs" id="1_2xvle"]
+
+[node name="GameEndedMenu" type="CanvasLayer"]
+script = ExtResource("1_2xvle")

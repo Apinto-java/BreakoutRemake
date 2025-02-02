@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7wkebw2ch348"]
+
+[ext_resource type="Script" path="res://Scripts/Ball.cs" id="1_1uscp"]
+[ext_resource type="Texture2D" uid="uid://ci3eeb0apk2gj" path="res://Assets/white_tile.png" id="1_xo5el"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a8cnp"]
+size = Vector2(8, 8)
+
+[node name="Ball" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 129
+motion_mode = 1
+script = ExtResource("1_1uscp")
+_speed = 300.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_xo5el")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_a8cnp")

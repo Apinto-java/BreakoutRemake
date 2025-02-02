@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy7podcuanxtq"]
+
+[ext_resource type="Script" path="res://Scripts/LoseArea.cs" id="1_tp7qn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b561"]
+size = Vector2(448, 40)
+
+[node name="LoseArea" type="Area2D"]
+position = Vector2(224, 616)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_tp7qn")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0b561")
+metadata/_edit_lock_ = true

@@ -1,0 +1,51 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgphgk7l8a32s"]
+
+[ext_resource type="Texture2D" uid="uid://c4ykdpj1c63yp" path="res://Assets/LevelImages/Level1.png" id="1_2o08i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvrfj"]
+bg_color = Color(0.358651, 0.182218, 0.119743, 1)
+
+[node name="SelectLevelCard" type="Panel"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -248.0
+offset_bottom = -298.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_bvrfj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Level 0"
+horizontal_alignment = 1
+
+[node name="LevelPicture" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_2o08i")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="SelectButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SELECT"
+
+[node name="CompletedLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Completed"
+horizontal_alignment = 1

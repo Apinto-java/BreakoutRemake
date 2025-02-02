@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=3 uid="uid://o6o0yp6fhugg"]
+
+[ext_resource type="Script" path="res://Scripts/Paddle.cs" id="1_kh6ee"]
+[ext_resource type="Script" path="res://Scripts/LeftCollisionShape.cs" id="2_ui8j0"]
+[ext_resource type="PackedScene" uid="uid://cld5d7vdje1r8" path="res://Objects/paddle_sprite.tscn" id="3_txpnn"]
+[ext_resource type="Script" path="res://Scripts/MiddleCollisionShape.cs" id="4_hlp1n"]
+[ext_resource type="Script" path="res://Scripts/RightCollisionShape.cs" id="5_wrsto"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3304"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvnyr"]
+size = Vector2(32, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lm7nn"]
+size = Vector2(32, 16)
+
+[node name="Paddle" type="CharacterBody2D"]
+collision_mask = 130
+motion_mode = 1
+script = ExtResource("1_kh6ee")
+Speed = 500.0
+SmoothFactor = 20.0
+
+[node name="LeftCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(-32, 0)
+shape = SubResource("RectangleShape2D_n3304")
+script = ExtResource("2_ui8j0")
+metadata/_edit_lock_ = true
+
+[node name="PaddleSprite" parent="LeftCollisionShape" instance=ExtResource("3_txpnn")]
+
+[node name="MiddleCollisionShape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yvnyr")
+script = ExtResource("4_hlp1n")
+metadata/_edit_lock_ = true
+
+[node name="PaddleSprite" parent="MiddleCollisionShape" instance=ExtResource("3_txpnn")]
+
+[node name="RightCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2(32, 0)
+shape = SubResource("RectangleShape2D_lm7nn")
+script = ExtResource("5_wrsto")
+metadata/_edit_lock_ = true
+
+[node name="PaddleSprite" parent="RightCollisionShape" instance=ExtResource("3_txpnn")]
+
+[node name="BallMarker" type="Marker2D" parent="."]
+position = Vector2(0, -24)

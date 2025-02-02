@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cld5d7vdje1r8"]
+
+[ext_resource type="Texture2D" uid="uid://dmdojo01l7y7v" path="res://Assets/PaddleSegment.png" id="1_mmw4h"]
+[ext_resource type="Script" path="res://Scripts/PaddleSprite.cs" id="2_6wx16"]
+[ext_resource type="Texture2D" uid="uid://c27w4n4tp4s3r" path="res://Assets/PaddleSegmentHit.png" id="3_ho2cc"]
+
+[node name="PaddleSprite" type="Sprite2D"]
+texture = ExtResource("1_mmw4h")
+script = ExtResource("2_6wx16")
+_normalTexture = ExtResource("1_mmw4h")
+_textureWhenHit = ExtResource("3_ho2cc")
+_hitDuration = 0.2
