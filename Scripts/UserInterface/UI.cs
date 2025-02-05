@@ -1,3 +1,4 @@
+using Breakout.Scripts.Global;
 using Godot;
 using System;
 
@@ -12,6 +13,7 @@ namespace Breakout.Scripts.UserInterface
 
 
 		private Button _tryAgainButton;
+		private Button _nextLevelButton;
 		private Button _goBackToMenuButton;
 		private Button _quitGameButton;
 
@@ -21,11 +23,13 @@ namespace Breakout.Scripts.UserInterface
 			_livesLabel = GetNode<Label>("VBoxContainer/MarginContainer/HBoxContainer/LivesLabel");
 			_gameEndedMenu = GetNode<CenterContainer>("VBoxContainer/GameEndedMenu");
 			_tryAgainButton = GetNode<Button>("VBoxContainer/GameEndedMenu/VBoxContainer/TryAgainButton");
+			_nextLevelButton = GetNode<Button>("VBoxContainer/GameEndedMenu/VBoxContainer/NextLevelButton");
 			_goBackToMenuButton = GetNode<Button>("VBoxContainer/GameEndedMenu/VBoxContainer/GoBackToMenuButton");
 			_quitGameButton = GetNode<Button>("VBoxContainer/GameEndedMenu/VBoxContainer/QuitButton");
 
 			_gameEndedMenu.Visible = false;
 			_tryAgainButton.Pressed += OnTryAgainPressed;
+			_nextLevelButton.Pressed += OnNextLevelPressed;
 			_goBackToMenuButton.Pressed += OnGoBackToMenuPressed;
 			_quitGameButton.Pressed += OnQuitGamePressed;
 		}
@@ -59,7 +63,9 @@ namespace Breakout.Scripts.UserInterface
 		private void OnGameEnded(bool won)
 		{
 			_gameEndedMenu.Visible = true;
+			var levelManager = GetNode<LevelManager>(GlobalUtils.LevelManagerPath);
 			_tryAgainButton.Visible = !won;
+			_nextLevelButton.Visible = won && levelManager.HasNextLevel();
 		}
 
 		private void OnTryAgainPressed()
@@ -67,9 +73,16 @@ namespace Breakout.Scripts.UserInterface
 			GetTree().ReloadCurrentScene();
 		}
 
+		private void OnNextLevelPressed()
+		{
+			var levelManager = GetNode<LevelManager>(GlobalUtils.LevelManagerPath);
+			levelManager.GoToNextLevel();
+		}
+
 		private void OnGoBackToMenuPressed()
 		{
-
+			var levelManager = GetNode<LevelManager>(GlobalUtils.LevelManagerPath);
+			levelManager.GoToMainMenu();
 		}
 
 		private void OnQuitGamePressed()

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://q42fio8f2bx8" path="res://Objects/background_color.tscn" id="1_0wrdf"]
 [ext_resource type="Script" path="res://Scripts/UserInterface/MainMenu.cs" id="1_kb866"]
-[ext_resource type="PackedScene" uid="uid://fv2l7u3kxl2q" path="res://Scenes/main.tscn" id="2_kltxb"]
+[ext_resource type="PackedScene" uid="uid://fv2l7u3kxl2q" path="res://Scenes/Levels/level1.tscn" id="2_kltxb"]
 [ext_resource type="PackedScene" uid="uid://b72tvvsn1mxro" path="res://UserInterface/select_level_menu.tscn" id="3_2c10b"]
 
 [node name="MainMenu" type="Control"]

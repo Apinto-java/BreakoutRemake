@@ -1,3 +1,4 @@
+using Breakout.Scripts.Global;
 using Godot;
 using System;
 
@@ -25,12 +26,14 @@ namespace Breakout.Scripts.UserInterface
 
 		private void OnNewGameButtonPressed()
 		{
-			GetTree().ChangeSceneToPacked(_newGameScene);
+			var levelManager = GetNode<LevelManager>(GlobalUtils.LevelManagerPath);
+			levelManager.NewGame();
 		}
 
 		private void OnSelectLevelButtonPressed()
 		{
-			GetTree().ChangeSceneToPacked(_selectLevelScene);
+			var levelManager = GetNode<LevelManager>(GlobalUtils.LevelManagerPath);
+			levelManager.GoToSelectLevel();
 		}
 
 		private void OnQuitButtonPressed()

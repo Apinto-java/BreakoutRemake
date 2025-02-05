@@ -51,6 +51,11 @@ visible = false
 layout_mode = 2
 text = "Try Again"
 
+[node name="NextLevelButton" type="Button" parent="VBoxContainer/GameEndedMenu/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "Next level"
+
 [node name="GoBackToMenuButton" type="Button" parent="VBoxContainer/GameEndedMenu/VBoxContainer"]
 layout_mode = 2
 text = "Go Back to Menu"

@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgphgk7l8a32s"]
+[gd_scene load_steps=4 format=3 uid="uid://cgphgk7l8a32s"]
 
 [ext_resource type="Texture2D" uid="uid://c4ykdpj1c63yp" path="res://Assets/LevelImages/Level1.png" id="1_2o08i"]
+[ext_resource type="Script" path="res://Scripts/UserInterface/SelectLevelCard.cs" id="1_bnx67"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bvrfj"]
 bg_color = Color(0.358651, 0.182218, 0.119743, 1)
 
-[node name="SelectLevelCard" type="Panel"]
+[node name="SelectLevelCard" type="Panel" node_paths=PackedStringArray("_levelNameLabel", "_levelTexture2D", "_selectButton")]
+custom_minimum_size = Vector2(200, 350)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,6 +16,10 @@ offset_bottom = -298.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_bvrfj")
+script = ExtResource("1_bnx67")
+_levelNameLabel = NodePath("MarginContainer/VBoxContainer/Title")
+_levelTexture2D = NodePath("MarginContainer/VBoxContainer/LevelPicture")
+_selectButton = NodePath("MarginContainer/VBoxContainer/SelectButton")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
